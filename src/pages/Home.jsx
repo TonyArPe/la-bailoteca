@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { getClases, getCategorias, getNiveles } from "../services/api";
 import AccordionClases from "../components/AccordionClases";
 import { Link } from "react-router-dom"; // Para redirigir a la página de añadir clases
-import "../styles/Spinner.css";
+
 import "../styles/Styles.css";
-import "../styles/Footer.css";
+import "../styles/Spinner.css";
+
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+
 
 function Home() {
   const [clases, setClases] = useState([]);

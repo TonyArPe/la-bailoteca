@@ -73,7 +73,9 @@ const AccordionClases = ({ clase, categoriasLista = [], nivelesLista = [], onDel
                     <Link to={`/edit-clase/${clase.id}`}>
                         <button>Editar</button>
                     </Link>
-                    <button onClick={handleRemoveClick}>Eliminar</button>
+                    <Link to={`/delete-clase/${clase.id}`}>
+                        <button>Borrar</button>
+                    </Link>
                 </div>
             </div>
 

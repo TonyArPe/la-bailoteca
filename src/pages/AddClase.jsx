@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addClase } from "../services/api";
+//import "../styles/FormStyles.css"
 
 function AddClaseForm() {
   const navigate = useNavigate();
@@ -30,6 +31,11 @@ function AddClaseForm() {
       console.error("Error añadiendo la clase:", error);
     }
   };
+
+  const handleCancelar = (e) => {
+    e.preventDefault()
+    navigate("/")
+  }
 
   return (
     <div className="form-container">
@@ -91,6 +97,9 @@ function AddClaseForm() {
           required
         />
         <button type="submit">Añadir Clase</button>
+        <button type="button" onClick={handleCancelar}>
+          Cancelar
+        </button>
       </form>
     </div>
   );
