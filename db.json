@@ -1,0 +1,155 @@
+{
+  "clases": [
+    {
+      "id": 1,
+      "nombre": "Salsa",
+      "descripcion": "Aprende salsa desde 0 con Tomas y Alba los martes, miercoles y jueves",
+      "profesores": "Tomas y Alba",
+      "niveles": [
+        1,
+        2,
+        3
+      ],
+      "categorias": [
+        1,
+        2
+      ],
+      "precio": "25€",
+      "duracion": "1 hora 30 min",
+      "imagen": "https://fotografias.correryfitness.com/clipping/cmsimages02/2017/08/31/91B3D01E-81EA-45B1-A436-B928433F3621/58.jpg",
+      "video": "https://www.youtube.com/watch?v=LR48EiXXFsg"
+    },
+    {
+      "id": 2,
+      "nombre": "Bachata",
+      "descripcion": "Aprende bachata y salsa desde 0 con Seba y Mamen los miercoles y jueves",
+      "profesores": "Sebas y Mamen",
+      "niveles": [
+        1,
+        2
+      ],
+      "categorias": [
+        3,
+        2
+      ],
+      "precio": "25€",
+      "duracion": "1 hora",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyu0WJFDiVPRRT3AuiE6e3klzTleJjupbMLQ&s",
+      "video": "https://www.youtube.com/watch?v=t808BgOjZPo"
+    },
+    {
+      "id": 3,
+      "nombre": "AfroHouse",
+      "descripcion": "Aprende afrohouse y disfruta con el ejercicio con Mimi los jueves",
+      "profesores": "Miriam",
+      "niveles": [
+        1,
+        2,
+        3
+      ],
+      "categorias": [
+        4
+      ],
+      "precio": "25€",
+      "duracion": "1 hora",
+      "imagen": "https://forrolocura.com/wp-content/uploads/2023/04/clases-de-baile-afro-house.jpg",
+      "video": "https://www.youtube.com/watch?v=60QH3TBg6_E"
+    },
+    {
+      "id": 4,
+      "nombre": "Kizomba",
+      "descripcion": "Aprende Kizomba desde cero con Ana y Luis los lunes y viernes.",
+      "profesores": "Ana y Luis",
+      "niveles": [
+        1,
+        2,
+        3
+      ],
+      "categorias": [
+        5
+      ],
+      "precio": "30€",
+      "duracion": "1 hora",
+      "imagen": "https://lacapillacultural.com/wp-content/uploads/2024/03/kizomba-1-1024x683.jpg",
+      "video": "https://www.youtube.com/watch?v=jcW7Z9y5twQ"
+    },
+    {
+      "id": 5,
+      "nombre": "Reggaeton",
+      "descripcion": "Clases de reggaeton con intensidad y ritmo con Juan los martes y jueves.",
+      "profesores": "Juan",
+      "niveles": [
+        1,
+        2
+      ],
+      "categorias": [
+        6
+      ],
+      "precio": "20€",
+      "duracion": "45 min",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAZhkEM1TWt1HpHelzscdpxAwlWr1_wAadQ&s",
+      "video": "https://www.youtube.com/watch?v=C8YbV6sQdkA"
+    },
+    {
+      "id": 6,
+      "nombre": "Tango",
+      "descripcion": "Domina el arte del tango con Sofía y Carlos los sábados.",
+      "profesores": "Sofía y Carlos",
+      "niveles": [
+        2,
+        3
+      ],
+      "categorias": [
+        7
+      ],
+      "precio": "35€",
+      "duracion": "1 hora 15 min",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlY2i9mwimRrqT0CCHEcZLiGBV7_w63GYMYg&s",
+      "video": "https://www.youtube.com/watch?v=7uA3mwfadAM"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Salsa"
+    },
+    {
+      "id": 2,
+      "nombre": "Bachata"
+    },
+    {
+      "id": 3,
+      "nombre": "Salsa Cubana"
+    },
+    {
+      "id": 4,
+      "nombre": "AfroHouse"
+    },
+    {
+      "id": 5,
+      "nombre": "Kizomba"
+    },
+    {
+      "id": 6,
+      "nombre": "Reggaeton"
+    },
+    {
+      "id": 7,
+      "nombre": "Tango"
+    }
+  ],
+  "niveles": [
+    {
+      "id": 1,
+      "nombre": "Inicial"
+    },
+    {
+      "id": 2,
+      "nombre": "Intermedio"
+    },
+    {
+      "id": 3,
+      "nombre": "Avanzado"
+    }
+  ]
+}

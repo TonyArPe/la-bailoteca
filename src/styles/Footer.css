@@ -1,0 +1,61 @@
+.footer {
+    background-color: #6A1B9A;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #E91E63;
+}
+
+/* ====== Estilos de Filtros ====== */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.filtros label {
+    font-weight: 600;
+    color: #6A1B9A;
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="checkbox"] {
+    padding: 10px;
+    border: 1px solid #6A1B9A;
+    border-radius: 5px;
+    background-color: #F9F3FE;
+    transition: background-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="checkbox"]:focus {
+    outline: none;
+    border-color: #6A1B9A;
+    background-color: #E8D6F9;
+}
