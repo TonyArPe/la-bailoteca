@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import EditClaseForm from "../pages/EditClase";
 import ConfirmDeleteModal from "../pages/ConfirmDeleteModal";
+import "../styles/AccordionClases.css";
 
 const AccordionClases = ({ clase, categoriasLista = [], nivelesLista = [], onDelete, onUpdate, deleteClase, updateClase }) => {
     const [desplegado, setDesplegado] = useState(false);
@@ -55,7 +56,7 @@ const AccordionClases = ({ clase, categoriasLista = [], nivelesLista = [], onDel
     };
 
     return (
-        <div className="accordion">
+        <div className={`accordion ${desplegado ? "open" : ""}`}>
             <div className="accordion-header" onClick={() => setDesplegado(!desplegado)}>
                 <h2>{clase.nombre}</h2>
                 <p><strong>Profesores:</strong> {clase.profesores}</p>
@@ -65,34 +66,31 @@ const AccordionClases = ({ clase, categoriasLista = [], nivelesLista = [], onDel
                 <div className="image-container">
                     <img src={clase.imagen} alt={clase.nombre} className="accordion-image" />
                 </div>
+                <div className="button-group">
+                    <Link to={`/edit-clase/${clase.id}`}>
+                        <button className="edit-button">✏️ Editar</button>
+                    </Link>
+                    <Link to={`/delete-clase/${clase.id}`}>
+                        <button className="delete-button">🗑️ Borrar</button>
+                    </Link>
+                </div>
                 <button className="accordion-toggle">
                     {desplegado ? "Cerrar" : "Ver más"}
                 </button>
-
-                <div className="button-group">
-                    <Link to={`/edit-clase/${clase.id}`}>
-                        <button>Editar</button>
-                    </Link>
-                    <Link to={`/delete-clase/${clase.id}`}>
-                        <button>Borrar</button>
-                    </Link>
-                </div>
             </div>
-
             {desplegado && (
                 <div className="accordion-content">
                     <p><strong>Descripción:</strong> {clase.descripcion}</p>
                     <button className="video-button" onClick={() => setMostrarVideo(true)}>
-                        Ver Video
+                        🎬 Ver Video
                     </button>
                 </div>
             )}
-
             {mostrarVideo && (
-                <div className="video-dialog">
+                <div className="video-dialog fade-in">
                     <div className="video-content">
                         <button className="close-button" onClick={() => setMostrarVideo(false)}>
-                            X Cerrar Video
+                            ❌ Cerrar Video
                         </button>
                         <iframe
                             width="560"
@@ -106,7 +104,6 @@ const AccordionClases = ({ clase, categoriasLista = [], nivelesLista = [], onDel
                     </div>
                 </div>
             )}
-
             {modal.edit && (
                 <EditClaseForm
                     clase={clase}
@@ -116,7 +113,6 @@ const AccordionClases = ({ clase, categoriasLista = [], nivelesLista = [], onDel
                     onUpdate={handleUpdate}
                 />
             )}
-
             {modal.remove && (
                 <ConfirmDeleteModal
                     claseId={clase.id}

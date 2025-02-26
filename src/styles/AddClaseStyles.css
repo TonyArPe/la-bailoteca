@@ -1,0 +1,81 @@
+/* Estilos del formulario de añadir clase */
+.add-clase-form-container {
+    background: white;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.add-clase-form-container h1 {
+    color: #6A1B9A;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-clase-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-clase-input, .add-clase-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #9C27B0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: #F9F3FE;
+    color: #4A148C;
+}
+
+.add-clase-input:focus, .add-clase-textarea:focus {
+    outline: none;
+    border-color: #6A1B9A;
+    background-color: #E8D6F9;
+}
+
+.add-clase-button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.add-clase-button.submit {
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+    color: white;
+}
+
+.add-clase-button.submit:hover {
+    background: linear-gradient(135deg, #7B1FA2, #4A148C);
+    transform: scale(1.05);
+}
+
+.add-clase-button.cancel {
+    background: #f06292;
+    color: white;
+}
+
+.add-clase-button.cancel:hover {
+    background: #e91e63;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .add-clase-form-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .add-clase-button {
+        font-size: 16px;
+    }
+}

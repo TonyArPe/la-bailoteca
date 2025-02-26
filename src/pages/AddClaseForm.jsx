@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addClase } from "../services/api";
-//import "../styles/FormStyles.css"
+import "../styles/AddClaseStyles.css";
 
 function AddClaseForm() {
   const navigate = useNavigate();
@@ -33,12 +33,12 @@ function AddClaseForm() {
   };
 
   const handleCancelar = (e) => {
-    e.preventDefault()
-    navigate("/")
-  }
+    e.preventDefault();
+    navigate("/");
+  };
 
   return (
-    <div className="form-container">
+    <div className="add-clase-form-container">
       <h1>Añadir Nueva Clase</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -48,6 +48,7 @@ function AddClaseForm() {
           value={formData.nombre}
           onChange={handleChange}
           required
+          className="add-clase-input"
         />
         <textarea
           name="descripcion"
@@ -55,6 +56,7 @@ function AddClaseForm() {
           value={formData.descripcion}
           onChange={handleChange}
           required
+          className="add-clase-textarea"
         />
         <input
           type="text"
@@ -63,6 +65,7 @@ function AddClaseForm() {
           value={formData.profesores}
           onChange={handleChange}
           required
+          className="add-clase-input"
         />
         <input
           type="text"
@@ -71,6 +74,7 @@ function AddClaseForm() {
           value={formData.precio}
           onChange={handleChange}
           required
+          className="add-clase-input"
         />
         <input
           type="text"
@@ -79,6 +83,7 @@ function AddClaseForm() {
           value={formData.duracion}
           onChange={handleChange}
           required
+          className="add-clase-input"
         />
         <input
           type="url"
@@ -87,6 +92,7 @@ function AddClaseForm() {
           value={formData.imagen}
           onChange={handleChange}
           required
+          className="add-clase-input"
         />
         <input
           type="url"
@@ -95,9 +101,10 @@ function AddClaseForm() {
           value={formData.video}
           onChange={handleChange}
           required
+          className="add-clase-input"
         />
-        <button type="submit">Añadir Clase</button>
-        <button type="button" onClick={handleCancelar}>
+        <button type="submit" className="add-clase-button submit">Añadir Clase</button>
+        <button type="button" onClick={handleCancelar} className="add-clase-button cancel">
           Cancelar
         </button>
       </form>

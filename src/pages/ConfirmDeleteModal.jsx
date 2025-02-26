@@ -1,10 +1,9 @@
 import React from "react";
 import { deleteClase } from "../services/api";
 import { useNavigate } from "react-router-dom";
-//import "../styles/FormStyles.css"
+import "../styles/ConfirmDeleteStyles.css";
 
 const ConfirmDeleteModal = ({ claseId, onClose }) => {
-
   const navigate = useNavigate();
 
   const handleDelete = async () => {
@@ -18,15 +17,16 @@ const ConfirmDeleteModal = ({ claseId, onClose }) => {
 
   const handleCancel = (e) => {
     e.preventDefault();
-    navigate("/")
-  }
-
+    navigate("/");
+  };
 
   return (
-    <div className="modal">
+    <div className="confirm-delete-modal">
       <p>¿Estás seguro de que deseas eliminar esta clase?</p>
-      <button onClick={handleDelete}>Sí, eliminar</button>
-      <button onClick={handleCancel}>Cancelar</button>
+      <div className="confirm-delete-buttons">
+        <button onClick={handleDelete} className="confirm-delete-button delete">Sí, eliminar</button>
+        <button onClick={handleCancel} className="confirm-delete-button cancel">Cancelar</button>
+      </div>
     </div>
   );
 };

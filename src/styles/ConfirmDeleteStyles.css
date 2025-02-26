@@ -1,0 +1,65 @@
+/* Estilos del modal de confirmación de eliminación */
+.confirm-delete-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.confirm-delete-modal p {
+    font-size: 1.2rem;
+    color: #4A148C;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.confirm-delete-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.confirm-delete-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.confirm-delete-button.delete {
+    background: #e91e63;
+    color: white;
+}
+
+.confirm-delete-button.delete:hover {
+    background: #c2185b;
+    transform: scale(1.05);
+}
+
+.confirm-delete-button.cancel {
+    background: #9C27B0;
+    color: white;
+}
+
+.confirm-delete-button.cancel:hover {
+    background: #6A1B9A;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .confirm-delete-modal {
+        width: 95%;
+    }
+}

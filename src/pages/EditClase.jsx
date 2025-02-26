@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getClases, updateClase } from "../services/api";
-//import "../styles/FormStyles.css"
+import "../styles/EditClaseStyles.css";
 
 const EditClase = () => {
   const { id } = useParams(); // Obtener el ID de la URL
@@ -9,7 +9,6 @@ const EditClase = () => {
   const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  
   useEffect(() => {
     const fetchClase = async () => {
       try {
@@ -31,7 +30,6 @@ const EditClase = () => {
     fetchClase();
   }, [id]);
 
-  // Manejar cambios en los inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -40,7 +38,6 @@ const EditClase = () => {
     }));
   };
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -51,24 +48,22 @@ const EditClase = () => {
     }
   };
 
-  // Manejar la cancelación
   const handleCancelar = (e) => {
     e.preventDefault();
     navigate("/"); // Redirige a Home al cancelar
   };
 
-  
   if (loading) {
     return <p>Cargando clase...</p>;
   }
 
-  
   if (!formData) {
     return <p>No se encontró la clase.</p>;
   }
 
   return (
-    <div className="modal">
+    <div className="edit-clase-form-container">
+      <h1>Editar Clase</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -76,12 +71,14 @@ const EditClase = () => {
           value={formData.nombre}
           onChange={handleChange}
           required
+          className="edit-clase-input"
         />
         <textarea
           name="descripcion"
           value={formData.descripcion}
           onChange={handleChange}
           required
+          className="edit-clase-textarea"
         />
         <input
           type="text"
@@ -89,6 +86,7 @@ const EditClase = () => {
           value={formData.profesores}
           onChange={handleChange}
           required
+          className="edit-clase-input"
         />
         <input
           type="text"
@@ -96,6 +94,7 @@ const EditClase = () => {
           value={formData.precio}
           onChange={handleChange}
           required
+          className="edit-clase-input"
         />
         <input
           type="text"
@@ -103,6 +102,7 @@ const EditClase = () => {
           value={formData.duracion}
           onChange={handleChange}
           required
+          className="edit-clase-input"
         />
         <input
           type="url"
@@ -110,6 +110,7 @@ const EditClase = () => {
           value={formData.imagen}
           onChange={handleChange}
           required
+          className="edit-clase-input"
         />
         <input
           type="url"
@@ -117,9 +118,10 @@ const EditClase = () => {
           value={formData.video}
           onChange={handleChange}
           required
+          className="edit-clase-input"
         />
-        <button type="submit">Guardar</button>
-        <button type="button" onClick={handleCancelar}>
+        <button type="submit" className="edit-clase-button submit">Guardar</button>
+        <button type="button" onClick={handleCancelar} className="edit-clase-button cancel">
           Cancelar
         </button>
       </form>

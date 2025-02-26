@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getClases, getCategorias, getNiveles } from "../services/api";
 import AccordionClases from "../components/AccordionClases";
-import { Link } from "react-router-dom"; // Para redirigir a la página de añadir clases
+import { Link } from "react-router-dom";
 
 import "../styles/Styles.css";
 import "../styles/Spinner.css";
@@ -105,9 +105,11 @@ function Home() {
         </div>
       ) : (
         <>
+        <div className="add-class-button">
           <Link to="/add-clase">
-            <button>Añadir Nueva Clase</button>
+            Añadir Nueva Clase
           </Link>
+        </div>
 
           <h2>Filtrar por Clases</h2>
           <input
